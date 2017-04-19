@@ -5,16 +5,16 @@ LibreSSL.
 
 ## Usage
 
-The application's entrypoint is configurable in the `docker-entrypoint`.sh
+The application's home is configurable in the `docker-entrypoint`.sh
 file; the default is `/app`.
 
 Assuming the image built from this Dockerfile is tagged
-`salazar/openresty`, the command below will run a container exposing
+`gmesalazar/openresty`, the command below will run a container exposing
 port 8080 to the host and mapping our `app` dir to the container's
 `/app`:
 
 ```
-docker run -ti -p 8080:8080 -v $PWD/app:/app --user $UID:$GID gmesalazar/test
+docker run -ti -p 8080:8080 -v $PWD/app:/app --user $UID:$GID gmesalazar/openresty
 ```
 
 Flag `--user $UID:GID` makes sure any file created in the container
