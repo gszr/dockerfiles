@@ -4,6 +4,8 @@
 
 FROM alpine:latest
 
+MAINTAINER Guilherme Salazar <gmesalazar@gmail.com>
+
 RUN \
 	mkdir build && cd build && \
 	apk add --no-cache \
